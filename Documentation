@@ -1,0 +1,46 @@
+// Documentation
+
+The purpose of this project is to develop a Student Record Management System in Java for a university. The system should provide administrators with
+the ability to manage student records effectively. It should allow administrators to add new students, update student information, and view student details.
+The project should emphasize the use of appropriate access modifiers (public, private, protected) to control access to class members.
+
+
+The project consists of three classes:
+1. Student
+2. StudentManagement, and
+3. AdministratorInterface.
+
+// Student class
+The Student class represents a student entity with attributes such as name, ID, age, and grade. The class has private instance variables to store these attributes and
+public getter and setter methods to access and update them. The class also has a public constructor to initialize a student object with given parameters and a public toString method
+to return a string representation of a student object.
+
+// StudentManagement class
+The StudentManagement class is a utility class that provides static methods to perform operations on student records. The class has private static variables to store a list of students
+and the total number of students. The class also has a private constructor to prevent instantiation of the class. The class implements three static methods:
+1. addStudent,
+2. updateStudent, and
+3. getStudentDetails.
+
+The addStudent method accepts parameters for student information and creates a new Student object. It adds the student to the list of students and updates
+the total number of students.
+The updateStudent method accepts a student ID and new information for a student. It locates the student in the list and updates its information accordingly.
+The getStudentDetails method accepts a student ID and returns the details of that student.
+
+// AdministratorInterface class
+The Administrator class is an interface class that provides an interactive command-line interface for administrators to interact with
+the Student Record Management System. The class has a main method that displays a menu with options to add a new student, update student information, and view student details.
+It prompts the administrator for necessary inputs and calls the appropriate methods in the StudentManagement class to perform the requested operations.
+The class also implements error handling to handle cases where the student ID is not found or invalid inputs are provided.
+The access modifiers used in this project are public, private, and protected. Public access modifier allows access to class members from any other class.
+Private access modifier restricts access to class members only within the same class. Protected access modifier allows access to class members only within the same package or
+from subclasses in other packages. The use of these access modifiers is important to ensure the principle of encapsulation, which is to hide the internal details of a class from the
+outside world and provide a public interface for interaction. By using private variables and public methods, the Student class ensures that its attributes are not directly accessible
+or modifiable by other classes, but only through the getter and setter methods. By using private static variables and static methods, the StudentManagement class ensures that
+its variables are shared among all instances of the class and that its methods can be invoked without creating an object of the class. By using protected variables and
+methods, a subclass of Student or StudentManagement can inherit and access the variables and methods of its superclass, but not from other unrelated classes.
+
+To run the program, you need to have Java installed on your system and compile and execute the Administrator class. You can use any Java IDE or command-line tool to do so.
+To interact with the administrator interface, you need to enter a valid option from the menu (1, 2, 3, or 4) and provide the required inputs for each option.
+The program will display the results or error messages accordingly. To exit the program, you need to enter 4 as the option.
+
